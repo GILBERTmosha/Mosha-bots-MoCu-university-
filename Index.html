@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mosha Bots | Premium WhatsApp Bots Hub</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Mosha Bots ni website bora ya WhatsApp Bots Tanzania yenye premium bots, AI commands, anti-link, downloaders, na huduma za kisasa.">
+<meta name="keywords" content="Mosha Bots, WhatsApp Bot, Sula OFC, WhatsApp Bots Tanzania, AI Bot, Premium Bots, Mosha">
+<meta name="author" content="Mosha Bots">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Mosha Bots | Premium WhatsApp Bots Hub">
+<meta property="og:description" content="Unganisha WhatsApp bots bora zaidi kwa matumizi binafsi na group.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://i.ibb.co/TBZHfM19/PXL-20260504-112438226-PORTRAIT.jpg">
+
+<!-- PWA Meta -->
+<meta name="theme-color" content="#00f2fe">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mosha Bots">
+
+<!-- Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --primary:#00f2fe;
+    --secondary:#ff00a6;
+    --dark:#070710;
+    --card:#111122;
+    --light:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:
+    radial-gradient(circle at top right,#2a0845 0%,transparent 30%),
+    radial-gradient(circle at bottom left,#001f3f 0%,transparent 30%),
+    linear-gradient(135deg,#06060f,#090914,#020204);
+    color:white;
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(var(--primary),var(--secondary));
+    border-radius:20px;
+}
+
+/* Floating Glow */
+.glow{
+    position:fixed;
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:0.25;
+    z-index:-1;
+}
+
+.glow.one{
+    background:#00f2fe;
+    top:-100px;
+    left:-100px;
+}
+
+.glow.two{
+    background:#ff00a6;
+    bottom:-100px;
+    right:-100px;
+}
+
+/* Navbar */
+.navbar{
+    backdrop-filter:blur(15px);
+    background:rgba(0,0,0,0.35)!important;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.navbar-brand{
+    font-family:'Orbitron',sans-serif;
+    font-weight:700;
+    font-size:1.4rem;
+    color:white!important;
+}
+
+.nav-link{
+    color:#d9d9d9!important;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:var(--primary)!important;
+}
+
+/* Hero */
+.hero{
+    padding:120px 0 70px;
+    text-align:center;
+}
+
+.hero-title{
+    font-family:'Orbitron',sans-serif;
+    font-size:4rem;
+    font-weight:800;
+    line-height:1.2;
+    background:linear-gradient(45deg,var(--primary),#7f7fff,var(--secondary));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:glowText 3s infinite alternate;
+}
+
+.hero-subtitle{
+    color:#b9b9b9;
+    max-width:750px;
+    margin:auto;
+    margin-top:20px;
+    font-size:1.05rem;
+}
+
+.hero-buttons{
+    margin-top:35px;
+}
+
+.btn-premium{
+    background:linear-gradient(45deg,var(--primary),#4facfe);
+    border:none;
+    padding:14px 32px;
+    border-radius:40px;
+    color:white;
+    font-weight:600;
+    transition:0.4s;
+    box-shadow:0 0 20px rgba(0,242,254,0.3);
+}
+
+.btn-premium:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 10px 30px rgba(0,242,254,0.5);
+    color:white;
+}
+
+.btn-pink{
+    background:linear-gradient(45deg,var(--secondary),#ff4fd8);
+    box-shadow:0 0 20px rgba(255,0,166,0.3);
+}
+
+.btn-pink:hover{
+    box-shadow:0 10px 30px rgba(255,0,166,0.5);
+}
+
+/* Stats */
+.stats-box{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:25px;
+    padding:30px;
+    backdrop-filter:blur(14px);
+}
+
+.stat-number{
+    font-size:2rem;
+    font-weight:700;
+    color:var(--primary);
+}
+
+/* Cards */
+.section-title{
+    font-family:'Orbitron',sans-serif;
+    text-align:center;
+    margin-bottom:15px;
+    font-size:2.2rem;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#aaa;
+    margin-bottom:50px;
+}
+
+.bot-card{
+    position:relative;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:30px;
+    overflow:hidden;
+    padding:35px 25px;
+    height:100%;
+    transition:0.5s;
+    backdrop-filter:blur(15px);
+}
+
+.bot-card::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:5px;
+    top:0;
+    left:0;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+}
+
+.bot-card:hover{
+    transform:translateY(-12px) scale(1.02);
+    border-color:rgba(0,242,254,0.5);
+    box-shadow:0 20px 45px rgba(0,0,0,0.5);
+}
+
+.bot-icon{
+    width:90px;
+    height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    margin:auto;
+    margin-bottom:25px;
+    font-size:2.4rem;
+    background:linear-gradient(45deg,rgba(0,242,254,0.15),rgba(255,0,166,0.15));
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.bot-card h4{
+    font-weight:700;
+}
+
+.bot-card p{
+    color:#b8b8b8;
+    font-size:0.94rem;
+}
+
+.badge-premium{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:linear-gradient(45deg,var(--secondary),#ff4fd8);
+    border-radius:30px;
+    padding:8px 15px;
+    font-size:0.75rem;
+    font-weight:700;
+    box-shadow:0 0 15px rgba(255,0,166,0.4);
+}
+
+/* Selector */
+.selector-box{
+    margin-top:80px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.07);
+    border-radius:30px;
+    padding:40px;
+    backdrop-filter:blur(16px);
+}
+
+.form-select{
+    background:rgba(0,0,0,0.45);
+    border:1px solid rgba(255,255,255,0.08);
+    color:white;
+    border-radius:16px;
+    padding:16px;
+}
+
+.form-select:focus{
+    background:rgba(0,0,0,0.6);
+    color:white;
+    border-color:var(--primary);
+    box-shadow:none;
+}
+
+/* Contact */
+.contact-box{
+    margin-top:90px;
+    padding:50px 30px;
+    background:linear-gradient(135deg,rgba(0,242,254,0.08),rgba(255,0,166,0.08));
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,0.07);
+}
+
+.contact-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 24px;
+    border-radius:50px;
+    text-decoration:none;
+    margin:10px;
+    color:white;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+.contact-link:hover{
+    background:linear-gradient(45deg,var(--primary),var(--secondary));
+    transform:translateY(-4px);
+    color:white;
+}
+
+/* Footer */
+footer{
+    margin-top:100px;
+    padding:30px 0;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.07);
+    background:rgba(0,0,0,0.25);
+    color:#a8a8a8;
+}
+
+/* Animation */
+@keyframes glowText{
+    from{
+        filter:drop-shadow(0 0 10px rgba(0,242,254,0.4));
+    }
+    to{
+        filter:drop-shadow(0 0 25px rgba(255,0,166,0.6));
+    }
+}
+
+@media(max-width:768px){
+
+.hero-title{
+    font-size:2.5rem;
+}
+
+.hero{
+    padding-top:90px;
+}
+
+.selector-box{
+    padding:25px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="glow one"></div>
+<div class="glow two"></div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="#">
+<img src="logo.png" width="45" height="45" style="border-radius:50%; margin-right:10px; border:2px solid #00f2fe; box-shadow:0 0 15px #00f2fe;">
+Mosha Bots
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#bots">Bots</a></li>
+<li class="nav-item"><a class="nav-link" href="#connect">Unganisha</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Mawasiliano</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero container">
+
+<div class="mb-4">
+<span class="badge rounded-pill text-bg-dark border border-info px-4 py-3 fs-6">
+🔥 Premium WhatsApp Bots 2026
+</span>
+</div>
+
+<h1 class="hero-title">
+BEST WHATSAPP <br>
+BOTS EXPERIENCE
+</h1>
+
+<p class="hero-subtitle">
+Unganisha WhatsApp bots bora zaidi zenye speed kali, anti-delete, anti-link,
+music downloader, AI commands, games, na features za kisasa kwa group na matumizi binafsi.
+</p>
+
+<div class="hero-buttons d-flex gap-3 justify-content-center flex-wrap">
+<a href="#bots" class="btn btn-premium">
+<i class="fas fa-rocket me-2"></i>Explore Bots
+</a>
+
+<a href="#connect" class="btn btn-premium btn-pink">
+<i class="fas fa-link me-2"></i>Connect Now
+</a>
+</div>
+
+<!-- Stats -->
+<div class="row mt-5 g-4 justify-content-center">
+<div class="col-md-3">
+<div class="stats-box">
+<div class="stat-number">50K+</div>
+<p>Active Users</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="stats-box">
+<div class="stat-number">99%</div>
+<p>Fast Response</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="stats-box">
+<div class="stat-number">24/7</div>
+<p>Online Support</p>
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- Bots -->
+<section class="container" id="bots">
+
+<h2 class="section-title">Premium Bots Collection</h2>
+<p class="section-subtitle">Chagua bot unayoipenda na uanze kutumia sasa hivi.</p>
+
+<div class="row g-4">
+
+<!-- Sula -->
+<div class="col-md-6 col-lg-3">
+<div class="bot-card text-center">
+<div class="badge-premium">⭐ BEST</div>
+
+<div class="bot-icon text-danger">
+<i class="fas fa-crown"></i>
+</div>
+
+<h4>Sula OFC</h4>
+<p>
+Bot bora zaidi yenye anti-link, downloads zote, AI replies,
+na commands nyingi kali za kisasa.
+</p>
+
+<a href="https://sulaofc.store" target="_blank" class="btn btn-premium w-100 mt-3">
+<i class="fas fa-bolt me-2"></i>Unganisha
+</a>
+</div>
+</div>
+
+<!-- Manu -->
+<div class="col-md-6 col-lg-3">
+<div class="bot-card text-center">
+
+<div class="bot-icon text-info">
+<i class="fas fa-feather"></i>
+</div>
+
+<h4>Manu MD Lite</h4>
+<p>
+Lightweight bot yenye matumizi madogo ya internet na performance kali sana.
+</p>
+
+<a href="https://manulofficial.store/manu-md-lite" target="_blank" class="btn btn-premium w-100 mt-3">
+<i class="fas fa-link me-2"></i>Open Bot
+</a>
+</div>
+</div>
+
+<!-- Atlas -->
+<div class="col-md-6 col-lg-3">
+<div class="bot-card text-center">
+
+<div class="bot-icon text-primary">
+<i class="fas fa-globe"></i>
+</div>
+
+<h4>Atlas MB</h4>
+<p>
+Downloader powerhouse kwa TikTok, YouTube, music,
+movies na commands za entertainment.
+</p>
+
+<a href="https://atlas-mb.vercel.app" target="_blank" class="btn btn-premium w-100 mt-3">
+<i class="fas fa-play me-2"></i>Launch
+</a>
+</div>
+</div>
+
+<!-- Mini -->
+<div class="col-md-6 col-lg-3">
+<div class="bot-card text-center">
+
+<div class="bot-icon text-success">
+<i class="fas fa-robot"></i>
+</div>
+
+<h4>MiniBot</h4>
+<p>
+Rahisi kutumia, stable, fast commands,
+na perfect kwa WhatsApp groups.
+</p>
+
+<a href="https://xhclinton.com/minibot" target="_blank" class="btn btn-premium w-100 mt-3">
+<i class="fas fa-arrow-up-right-from-square me-2"></i>Open
+</a>
+</div>
+</div>
+
+</div>
+
+<!-- Selector -->
+<div class="selector-box text-center" id="connect">
+<h2 class="mb-3 fw-bold">
+<i class="fas fa-wand-magic-sparkles text-info me-2"></i>
+Quick Connect
+</h2>
+
+<p class="text-secondary mb-4">
+Chagua bot hapa chini kisha bonyeza connect.
+</p>
+
+<div class="row g-3 justify-content-center">
+<div class="col-md-8">
+<select class="form-select" id="botSelector">
+<option value="https://sulaofc.store">🌟 Sula OFC</option>
+<option value="https://manulofficial.store/manu-md-lite">⚡ Manu MD Lite</option>
+<option value="https://atlas-mb.vercel.app">🌍 Atlas MB</option>
+<option value="https://xhclinton.com/minibot">🤖 MiniBot</option>
+</select>
+</div>
+
+<div class="col-md-4">
+<button onclick="openBot()" class="btn btn-premium w-100 h-100">
+<i class="fas fa-paper-plane me-2"></i>Connect
+</button>
+</div>
+</div>
+</div>
+
+<!-- Contact -->
+<div class="contact-box text-center" id="contact">
+<h2 class="fw-bold mb-3">Need Help?</h2>
+<p class="text-secondary mb-4">
+Wasiliana nasi kwa msaada wa kuunganisha bot au support nyingine.
+</p>
+
+<a href="tel:0793770731" class="contact-link">
+<i class="fas fa-phone"></i>
+0793770731
+</a>
+
+<a href="mailto:kingshamo47@gmail.com" class="contact-link">
+<i class="fas fa-envelope"></i>
+kingshamo47@gmail.com
+</a>
+
+<a href="https://wa.me/255793770731" class="contact-link" target="_blank">
+<i class="fab fa-whatsapp"></i>
+WhatsApp Chat
+</a>
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 Mosha Bots • Premium Dashboard</p>
+<p class="small mt-2">Powered by Mosha Bots Technology 🚀</p>
+</footer>
+
+<script>
+function openBot(){
+    let url=document.getElementById('botSelector').value;
+    window.open(url,'_blank');
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// PWA Install Prompt
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+
+    const installBtn = document.createElement('button');
+    installBtn.innerHTML = '<i class="fas fa-download me-2"></i>Install App';
+    installBtn.className = 'btn btn-premium position-fixed';
+    installBtn.style.bottom = '20px';
+    installBtn.style.right = '20px';
+    installBtn.style.zIndex = '9999';
+
+    document.body.appendChild(installBtn);
+
+    installBtn.addEventListener('click', async () => {
+        installBtn.style.display = 'none';
+        deferredPrompt.prompt();
+
+        const { outcome } = await deferredPrompt.userChoice;
+
+        if (outcome === 'accepted') {
+            console.log('App installed');
+        }
+
+        deferredPrompt = null;
+    });
+});
+
+// Register Service Worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Service Worker Registered'))
+        .catch(err => console.log(err));
+    });
+}
+</script>
+
+<!-- ADD THIS INSIDE <head> -->
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+
+<!-- manifest.json -->
+<!--
+{
+  "name": "Mosha Bots",
+  "short_name": "MoshaBots",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070710",
+  "theme_color": "#00f2fe",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+-->
+
+<!-- sw.js -->
+<!--
+const cacheName = 'mosha-bots-v1';
+
+self.addEventListener('install', e => {
+    self.skipWaiting();
+});
+
+self.addEventListener('fetch', event => {
+    event.respondWith(
+        caches.match(event.request).then(response => {
+            return response || fetch(event.request);
+        })
+    );
+});
+-->
+
+</body>
+  </html>
